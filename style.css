@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=SUSE:wght@100..800&display=swap');
+
+* {
+    user-select: none;
+}
+
+#cursor {
+    width: 0px;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+body {
+    cursor: none;
+    margin: 0;
+    background-color: #29292c;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body:active #cursor {
+    width: 50px;
+    background-color: #fff0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+#hello {
+    color: #fff;
+    font-family: 'Dancing Script';
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Suse';
+    font-size: 100px;
+    margin: 5px;
+}
+
+span {
+    margin: 0 20px;
+    text-shadow:
+        0 0 0px #fff,
+        0 0 0px #fff,
+        0 0 0px #fff;
+    transition: 0.1s ease;
+}
+
+span:hover {
+    opacity: 1;
+    text-shadow:
+        0 0 100px #fff,
+        0 0 80px #fff,
+        0 0 20px #fff;
+    transition: 0.3s linear;
+}
